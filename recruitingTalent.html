@@ -5,7 +5,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 包含 bootstrap 样式表 -->
     <link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/2.3.2/css/bootstrap.min.css">
+	
+	<link rel="stylesheet" href="css/recruiting-talent.css">
+	
+	<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-responsive.min.css" rel="stylesheet">
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet">
+	<!-- -->
+	<link rel="stylesheet" href="css/flat-ui.css">
 	<link rel="stylesheet" href="css/index.css">
+		
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
 
 <body>
@@ -21,6 +30,91 @@
 		</div>
 	</div>
 	
+	
+	<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span12">
+			<a href="index.html"><img class="img-company" src="img/img-company.png" alt="云巅科技"/></a>
+			<div class="row-fluid eye-layout" >
+				<a class="tetle-mode" href="index.html">
+					<div class="span2">
+						<h4>
+							首页
+						</h4>
+					</div>
+				</a>
+				<a class="tetle-mode" href="companyStatus.html">
+					<div class="span2">
+						<h4>
+							公司近况
+						</h4>
+					</div>
+				</a>
+				<a class="tetle-mode"  href="productCenter.html">
+					<div class="span2">
+						<h4>
+							产品中心
+						</h4>
+					</div>
+				</a>
+				<a class="tetle-mode" href="successfulCase.html">
+					<div class="span2">
+						<h4>
+							成功案例
+						</h4>
+					</div>
+				</a>
+				<a class="tetle-mode" href="aboutUs.html">
+					<div class="span2">
+						<h4>
+							关于我们
+						</h4>
+					</div>
+				</a>
+				<a class="tetle-mode" href="recruitingTalent.html">
+					<div class="span2">
+						<h4>
+							诚聘英才
+						</h4>
+					</div>
+				</a>
+			</div>
+			<div class="carousel slide">
+				<div class="carousel-inner">
+					<div class="item active">
+						<img alt="" src="img/company-image.jpg" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row-fluid">
+		<div class="span4">
+			<div  class="hero-unit panel-list">
+				<h2>
+						诚聘英才
+				</h2>
+				<p style="font-size:18px; font-weight:bold;">
+							  一、想要加入云巅科技
+						<br />二、有创新精神，能够接受新鲜事物；
+						<br />三、有进取心，学习能力强；
+						<br />四、敢于挑战自己，富有冒险精神；
+						<br />五、有团队合作精神，善于沟通；
+						<br />如果您符合以上条件，请联系我们。
+				</p>
+			</div>
+		</div>
+		<div class="span8">
+			<div class="hero-unit  panel-from">
+				<div id="editor">
+					在此填写您的信息
+				</div>
+				<div id="submit" class="col-xs-3" style="float:right; margin-top:5px;">
+					<a href="recruitingTalent.html" class="btn-lg btn-danger">提交信息</a>
+				</div>
+			</div>
+	</div>
+</div>
 	
  <div class="row page-footer"  style="background-color:#F5F5F5; margin-top:5%">
 				<div class="span12">
@@ -84,7 +178,7 @@
 							</ul>
 						</div>
 						<div class="span3">
-							<img alt="140x140" src="img/a.jpg" />
+							<a href="index.html"><img class="img-company" src="img/img-company.png" alt="云巅科技"/></a>
 						</div>
 					</div>
 				</div>
@@ -92,8 +186,29 @@
     <!-- JavaScript 放置在文档最后面可以使页面加载速度更快 -->
     <!-- 可选: 包含 jQuery 库 -->
     <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="js/jquery.hotkeys.js"></script>
     <!-- 可选: 合并了 Bootstrap JavaScript 插件 -->
     <script src="http://apps.bdimg.com/libs/bootstrap/2.3.2/js/bootstrap.min.js"></script>
+    <script src="js/prettify.js"></script>
+	<script src="js/bootstrap-wysiwyg.js"></script>
+	<script src="js/flat-ui.min.js"></script>
+	<script>
+		$(function(){
+			$('#editor').wysiwyg();
+			
+				var maxHight = $(".panel-list").height();
+				if (maxHight < $(".panel-from").height()){
+					 maxHight = $(".panel-from").height();
+				}
+				$(".panel-list").height(maxHight);
+				$(".panel-from").height(maxHight);
+			$('#submit').click(function(){
+				$('#editor').text("");
+			});
+		});
+	</script>
+	
+	
 
 </body>
 </html>
