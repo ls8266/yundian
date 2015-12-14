@@ -17,24 +17,32 @@ $(function(){
 	$(".technology-info-panel").height(maxHight);
 	
 	$(".company-info-panel").hover(function(){
+		$(this).removeClass("company-info-panel");
 		$(this).css("background-color","#95DFEC");
 	},function(){
+		$(this).addClass("company-info-panel");
 		$(this).css("background-color","#6EC4D5");
 	});
 	$(".news-info-panel").hover(function(){
+		$(this).removeClass("news-info-panel");
 		$(this).css("background-color","#FFD573");
 	},function(){
 		$(this).css("background-color","#FFA920");
+		$(this).addClass("news-info-panel");
 	});
 	$(".goods-info-panel").hover(function(){
+		$(this).removeClass("goods-info-panel");
 		$(this).css("background-color","#A0C868");
 	},function(){
 		$(this).css("background-color","#6EA166");
+		$(this).addClass("goods-info-panel");
 	});
 	$(".technology-info-panel").hover(function(){
+		$(this).removeClass("technology-info-panel");
 		$(this).css("background-color","#4DC1B6");
 	},function(){
 		$(this).css("background-color","#26A59A");
+		$(this).addClass("technology-info-panel");
 	});
 	$(".img-switch").hover(function(){
 		$(".img-alert").animate({

@@ -2,6 +2,7 @@
 
 .product-item{
 background-color:#EEEEEE;
+overflow:hidden;
 margin-top:3%;
 }
 .product-item .hero-unit{
